@@ -11,8 +11,8 @@ export default function App() {
   return (
 
     <ImageBackground source={image} style={styles.image}>
-      <View>
-        <Timer />
+      <View style={styles.timer}>
+        <Timer/>
       </View>
     </ImageBackground>
   );
@@ -25,5 +25,9 @@ const styles = StyleSheet.create({
     flex: 1,
     resizeMode: "cover",
     justifyContent: "center",
+  },
+  timer: {
+    justifyContent: "center",
+    alignItems: "center"
   }
 });

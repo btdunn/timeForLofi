@@ -1,6 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { StyleSheet, Text, View, Animated} from 'react-native';
 import { CountdownCircleTimer } from 'react-native-countdown-circle-timer'
+
+// const [seconds, setSeconds] = useState(10)
+
+// const minuteSeconds = 60;
+
+
+// const getTimeSeconds = (time: number) => (minuteSeconds - time / 1000) | 0;
+// const getTimeMinutes = (time: number) => ((time) / minuteSeconds) | 0;
 
 
 
@@ -22,5 +30,7 @@ import { CountdownCircleTimer } from 'react-native-countdown-circle-timer'
       )}
     </CountdownCircleTimer>
   )
+
+  
 
 export default Timer
