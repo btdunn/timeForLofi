@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react'
-import { StyleSheet, Text, View, Animated, ViewComponent, Button} from 'react-native';
+import { StyleSheet, Text, View, Animated, ViewComponent, Button, TouchableOpacity} from 'react-native';
 import { CountdownCircleTimer } from 'react-native-countdown-circle-timer'
 
 
 const Timer = () => {
   const [playing, setPlaying] = useState(false)
+
   
     const togglePlaying = () => {
       setPlaying(!playing)
     }
 
     return(
-    <View>
+    <View >
       <CountdownCircleTimer
 
         isPlaying={playing}
@@ -30,10 +31,22 @@ const Timer = () => {
         )}
 
       </CountdownCircleTimer>
-      <Button onPress={togglePlaying} title="Toggle"></Button>
+      {/* <Button onPress={togglePlaying} title="Start/Stop"></Button> */}
+      {playing ? <TouchableOpacity style={styles.button} onPress={togglePlaying}><Text style={styles.text} >Stop</Text></TouchableOpacity> : <TouchableOpacity onPress={togglePlaying} style={styles.button}><Text style={styles.text}>Start</Text></TouchableOpacity>}
     </View>
     )
 }
+
+const styles = StyleSheet.create({
+  button: {
+    margin: 10,
+    backgroundColor: '#4f0a52'
+  
+  },
+  text: {
+    color: '#ffffff'
+  }
+});
 
 export default Timer
 

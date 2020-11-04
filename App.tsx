@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
   },
   timer: {
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    
   }
 });
